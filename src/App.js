@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import Footer from './Pages/Shared/Footer/Footer';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/login' element={<LogIn />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
