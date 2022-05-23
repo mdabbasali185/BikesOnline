@@ -1,9 +1,8 @@
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { Card, Carousel, Col, Row } from 'react-bootstrap';
-import mobile from '../../Images/Samsung-Galaxy-J3-LCD-Screen-Display-and-Touch-Panel-Digitizer-Assembly-Replacement-1.jpg'
+import React, { useState } from 'react';
+import { Carousel } from 'react-bootstrap';
+import mobile from '../../Images/Samsung-Galaxy-J3-LCD-Screen-Display-and-Touch-Panel-Digitizer-Assembly-Replacement-1.jpg';
 import './Home.css';
 
 
