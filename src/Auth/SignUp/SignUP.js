@@ -79,7 +79,7 @@ const SignUp = () => {
                             required
                         />
 
-                        <button className='animated-button mt-3' type="submit"> <span className="py-2"> Sign Up</span> </button>
+                        <button className='animated-button mt-3' type="submit"> <span className="py-2 text-white"> Sign Up</span> </button>
 
                         <ToastContainer />
                         <p className="fw-bold ">

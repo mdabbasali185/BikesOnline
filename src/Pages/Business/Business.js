@@ -4,13 +4,15 @@ import delevary from '../../Images/delevary.png'
 import support from '../../Images/customer-service.png'
 import payment from '../../Images/debit-card.png'
 import returnMoney from '../../Images/return-on-investment.png'
+import './Business.css'
 
 const Business = () => {
     return (
-        <div>
+        <div className='bg-dark'>
+            <div>
             <div className='text-center'>
                 <h2 className='text-info'>OUR LOYALTY</h2>
-                <h4>WE ARE TRY TO UNDERSTAND USER EXPECTATION</h4>
+                <h4 className='text-white'>WE ARE TRY TO UNDERSTAND USER EXPECTATION</h4>
             </div>
             <CardGroup>
                 <Card>
@@ -54,6 +56,7 @@ const Business = () => {
 
                 </Card>
             </CardGroup>
+        </div>
         </div>
     );
 };

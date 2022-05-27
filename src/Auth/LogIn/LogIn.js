@@ -96,7 +96,7 @@ const LogIn = () => {
             required
           />
 
-          <button className="animated-button d-block mx-auto m-2"> <span className="py-2">Login</span> </button>
+          <button className="animated-button d-block mx-auto m-2"> <span className="py-2 text-white">Login</span> </button>
 
           <p className="fw-bold ">
             Don't have an account?
@@ -107,7 +107,7 @@ const LogIn = () => {
         </form>
         <div className="text-center">
           <button className='animated-button mt-3 d-inline-block' type="submit" onClick={() => signInWithGoogle()}>
-            <span className="py-2">google </span>
+            <span className="py-2 text-white">google </span>
           </button>
         </div>
         <div className="text-center mt-3">
@@ -116,7 +116,7 @@ const LogIn = () => {
             onClick={forgetPassword}
             disabled={!email.length}
           >
-            <span className="py-2">Forget password </span>
+            <span className="py-2 text-white">Forget password </span>
           </button>
         </div>
       </div>

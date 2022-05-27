@@ -9,6 +9,7 @@ import bike3 from '../../Images/bike3.jpg';
 import bike4 from '../../Images/bike4.png';
 import Business from '../Business/Business';
 import LoadItems from '../LoadItems/LoadItems';
+import UserReview from '../UserReview/UserReview';
 import './Home.css';
 
 
@@ -135,8 +136,20 @@ const Home = () => {
                 </Row>
 
             </div>
-            <div className='container py-5'>
-            <Business />
+
+            {/* trusted section */}
+
+            <div className='businessSection'>
+                <div className='container py-5'>
+                    <Business />
+                </div>
+            </div>
+
+            {/* review  */}
+            <div className='userReviewStyle py-5'>
+                <div className='container'>
+                    <UserReview />
+                </div>
             </div>
         </div >
     );
