@@ -6,7 +6,7 @@ import './Dashboard.css'
 
 const Dashboard = () => {
     return (
-        <section className='d-flex h-100'>
+        <section className='d-flex h-100 align-items-stretch'>
             <div className='sidebar'>
 
 
