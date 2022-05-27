@@ -7,6 +7,7 @@ import bike1 from '../../Images/bike1.jpeg';
 import bike2 from '../../Images/bike2.jpg';
 import bike3 from '../../Images/bike3.jpg';
 import bike4 from '../../Images/bike4.png';
+import Business from '../Business/Business';
 import LoadItems from '../LoadItems/LoadItems';
 import './Home.css';
 
@@ -133,6 +134,9 @@ const Home = () => {
                     }
                 </Row>
 
+            </div>
+            <div className='container py-5'>
+            <Business />
             </div>
         </div >
     );
