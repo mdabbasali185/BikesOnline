@@ -16,6 +16,10 @@ import Blogs from './Pages/Blogs/Blogs';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import Review from './Pages/Review/Review';
+import Profile from './Pages/Profile/Profile';
+import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
+import ManageUser from './Pages/ManageUser/ManageUser';
 import MyItems from './Pages/MyItems/MyItems';
 import Products from './Pages/Products/Products';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -45,6 +49,14 @@ function App() {
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='manage_inventory' element={<RequireAuth><ManageInventory />
+          </RequireAuth>}></Route>
+          <Route path='review' element={<RequireAuth><Review />
+          </RequireAuth>}></Route>
+          <Route path='profile' element={<RequireAuth><Profile />
+          </RequireAuth>}></Route>
+          <Route path='manage-all-orders' element={<RequireAuth><ManageAllOrders />
+          </RequireAuth>}></Route>
+          <Route path='manageAllUser' element={<RequireAuth><ManageUser />
           </RequireAuth>}></Route>
           <Route path='my_items' element={<RequireAuth><MyItems /></RequireAuth>}></Route>
           <Route index element={
