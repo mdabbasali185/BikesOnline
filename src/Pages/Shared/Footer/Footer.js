@@ -11,10 +11,8 @@ const Footer = () => {
         <Row className='align-items-stretch'>
           <Col lg={4}>
             <div className="px-3 border-light border-end h-100">
-              <h1 className='word'><span className='text-light fst-italic'>E</span>STORE</h1>
-              <p className='text-secondary py-2'>Our products are most amazing products. We are provide our honourable customers.In this warehouse we have most authentic laptop products export in the
-                worldwide. We can provide the showrooms our products by any
-                times. </p>
+              <h1 className='word'><span className='text-light fst-italic'>bikes</span>online</h1>
+              <p className='text-secondary py-2'>For other cycling related terms (besides parts) see Glossary of cycling.. List of bicycle parts by alphabetic order: . Axle: as in the generic definition, a rod that serves to attach a wheel to a bicycle and provides support for bearings on which the wheel rotates. </p>
             </div>
           </Col>
           <Col lg={4}>
@@ -22,11 +20,11 @@ const Footer = () => {
               <h1>OUR SERVICES</h1>
               <div className='text-secondary'>
                 <h5>All Services</h5>
-                <h5>Ground Transport</h5>
+                <h5>Delivery</h5>
                 <h5>Shipping free</h5>
                 <h5>Logistic Service</h5>
-                <h5>Laptop Service</h5>
-                <h5>Storage</h5>
+                <h5>Legal Notice</h5>
+                <h5>About Us</h5>
               </div>
 
             </div>
