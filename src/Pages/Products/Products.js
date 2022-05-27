@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import LoadItems from '../LoadItems/LoadItems';
 
-const Inventory = () => {
+const Products = () => {
     const [card, setCard] = useState([])
     useEffect(() => {
         axios.get('/inventories')
@@ -22,4 +22,4 @@ const Inventory = () => {
     );
 };
 
-export default Inventory;
+export default Products;

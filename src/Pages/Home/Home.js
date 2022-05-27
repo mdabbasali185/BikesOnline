@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Card, Carousel, Col, Row } from 'react-bootstrap';
-import laptop1 from '../../Images/laptop1 (2).jpg';
-import laptop2 from '../../Images/laptop2.jpg';
-import laptop3 from '../../Images/laptop3.jpg';
-import laotopWorld from '../../Images/laotopWorld.jpg';
+import bike1 from '../../Images/bike1.jpeg';
+import bike2 from '../../Images/bike2.jpg';
+import bike3 from '../../Images/bike3.jpg';
+import bike4 from '../../Images/bike4.png';
 import LoadItems from '../LoadItems/LoadItems';
 import './Home.css';
 
@@ -42,10 +42,10 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 image"
-                            src={laptop1}
+                            src={bike1}
                             alt="First slide"
                         />
-                        <Carousel.Caption>
+                        <Carousel.Caption className='text-warning'>
                             <h1>Designed with precision</h1>
                             <p>The quicker, the better.</p>
                         </Carousel.Caption>
@@ -53,11 +53,11 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 image"
-                            src={laptop2}
+                            src={bike2}
                             alt="Second slide"
                         />
 
-                        <Carousel.Caption>
+                        <Carousel.Caption className='text-dark'>
                             <h1>Made affordable for you</h1>
                             <p>Your office companion.</p>
                         </Carousel.Caption>
@@ -65,11 +65,11 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 image"
-                            src={laptop3}
+                            src={bike3}
                             alt="Third slide"
                         />
 
-                        <Carousel.Caption>
+                        <Carousel.Caption className='text-warning'>
                             <h1>IT experiences made better</h1>
                             <p>Let your fingers do the talking.</p>
                         </Carousel.Caption>
@@ -91,11 +91,11 @@ const Home = () => {
 
             <div className='py-5'>
                 <div className='container text-info bg-dark py-2 rounded text-center'>
-                    <h1>This products is the trending Product to Sell in 2022.</h1>
+                    <h1>This parts is the trending Product to Sell in 2022.</h1>
                 </div>
                 <div className="banner">
-                    <h1 className="custom-style ">THE BRANDS YOU KNOW & </h1>
-                    <h1 className="custom-style "> NEW PRODUCTS YOU’LL LOVE</h1>
+                    <h1 className="custom-style ">THE PARTS YOU KNOW & </h1>
+                    <h1 className="custom-style "> LIKE PRODUCTS YOU’LL LOVE</h1>
                 </div>
             </div>
 

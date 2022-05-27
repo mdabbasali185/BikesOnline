@@ -1,28 +1,28 @@
 
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Route, Routes } from 'react-router-dom';
-
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
+import LogIn from './Auth/LogIn/LogIn';
+import RequireAuth from "./Auth/RequireAuth/RequireAuth";
+import SignUp from './Auth/SignUp/SignUP';
+import auth from './Firebase/firebase.init';
+import AddItems from './Pages/AddItems/AddItems';
 import Blogs from './Pages/Blogs/Blogs';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
-import Header from './Pages/Shared/Header/Header';
-import Inventory from './Pages/Inventory/Inventory';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import MyItems from './Pages/MyItems/MyItems';
-import AddItems from './Pages/AddItems/AddItems';
-import SingleItems from './Pages/SingleItems/SingleItems';
-import LogIn from './Auth/LogIn/LogIn';
+import Products from './Pages/Products/Products';
 import Footer from './Pages/Shared/Footer/Footer';
-import SignUp from './Auth/SignUp/SignUP';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-toastify/dist/ReactToastify.css';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from './Firebase/firebase.init';
-import RequireAuth from "./Auth/RequireAuth/RequireAuth"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import './App.css';
+import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
-import Dashboard from './Pages/Dashboard/Dashboard';
+import SingleItems from './Pages/SingleItems/SingleItems';
+
 
 function App() {
 
@@ -37,7 +37,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/inventory' element={<RequireAuth><Inventory /></RequireAuth>}></Route>
+        <Route path='/products' element={<RequireAuth><Products /></RequireAuth>}></Route>
 
         <Route path='/single_items/:id' element={<RequireAuth>
           <SingleItems />

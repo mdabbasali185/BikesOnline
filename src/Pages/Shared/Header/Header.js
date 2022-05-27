@@ -37,9 +37,9 @@ const Header = () => {
                                     className={({ isActive }) =>
                                         isActive ? "link-active link" : "link"
                                     }
-                                    to="/inventory"
+                                    to="/products"
                                 >
-                                    Inventory
+                                    Products
                                 </NavLink>
                             </Nav>
                             <Nav>
