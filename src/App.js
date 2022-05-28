@@ -26,6 +26,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import SingleItems from './Pages/SingleItems/SingleItems';
+import Portfolio from './Pages/Portfolio/Portfolio';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <SingleItems />
         </RequireAuth>}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/portfolio' element={<Portfolio />}></Route>
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='manage_inventory' element={<RequireAuth><ManageInventory />
           </RequireAuth>}></Route>

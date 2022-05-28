@@ -7,6 +7,7 @@ import axios from 'axios';
 import { BrowserRouter } from 'react-router-dom';
 
 axios.defaults.baseURL = 'http://localhost:5000/'
+// axios.defaults.baseURL = 'https://abbasbikepartsstore.herokuapp.com/'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

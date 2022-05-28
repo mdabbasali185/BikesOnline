@@ -1,6 +1,4 @@
 import React from 'react';
-import { faFacebook, faGithub, faGoogle, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Profile.css'
 import myPic from '../../Images/userReview.png'
 
@@ -42,15 +40,7 @@ const Profile = () => {
                         </div>
                     </div>
 
-                    <div className="social_media">
-                        <div className='d-flex mb-3'>
-                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.facebook.com/mdabbasali185'><FontAwesomeIcon className='px-2 fs-1 fb' icon={faFacebook}></FontAwesomeIcon></a>
-                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://github.com/mdabbasali185'><FontAwesomeIcon className='px-2 fs-1 github' icon={faGithub}></FontAwesomeIcon></a>
-                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='mailto:mdabbasali185@gmail.com'><FontAwesomeIcon className='px-2 fs-1 google' icon={faGoogle}></FontAwesomeIcon></a>
-                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.instagram.com/mdabbasali185/'><FontAwesomeIcon className='px-2 fs-1 instagram' icon={faInstagram}></FontAwesomeIcon></a>
-                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.linkedin.com/in/mdabbasali185/'><FontAwesomeIcon className='px-2 fs-1 linkedin' icon={faLinkedin}></FontAwesomeIcon></a>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>

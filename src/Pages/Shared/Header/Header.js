@@ -52,6 +52,16 @@ const Header = () => {
                                     Dashboard
                                 </NavLink>
                             </Nav>
+                            <Nav>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? "link-active link" : "link"
+                                    }
+                                    to="/portfolio"
+                                >
+                                    Portfolio
+                                </NavLink>
+                            </Nav>
 
                             <Nav>
                                 <NavLink
@@ -66,7 +76,7 @@ const Header = () => {
                             {user ? (
                                 <>
 
-                                    
+
                                     <Nav>
                                         <NavLink
                                             onClick={logOutHandler}
