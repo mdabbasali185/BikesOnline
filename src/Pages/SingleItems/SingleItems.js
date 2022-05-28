@@ -43,7 +43,7 @@ const SingleItems = () => {
         if (quantity.value > quantity || quantity.value < limit) {
             toast.error(`quantity value must be greater than ${limit} & smaller than ${quantity}`, { theme: 'colored' });
         } else {
-            const addOrder = {
+            const newOrder = {
                 productName: name,
                 email: email.value,
                 number: number.value,
@@ -51,6 +51,8 @@ const SingleItems = () => {
                 address: address.value,
                 quantity: quantity.value
             }
+            axios.post('/orders',newOrder)
+            .then(res=>console.log(res.data))
         }
     }
 
