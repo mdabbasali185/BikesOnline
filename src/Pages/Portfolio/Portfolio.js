@@ -3,6 +3,11 @@ import { faFacebook, faGithub, faGoogle, faInstagram, faLinkedin } from '@fortaw
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ownPic from '../../Images/Co-6005=.jpg'
 import { ProgressBar } from 'react-bootstrap';
+import ESTORE from '../../Images/wearhouse.png'
+import GYM from '../../Images/gym.jpg'
+import CarParadise from '../../Images/carparadise.jpg'
+
+
 
 
 const Portfolio = () => {
@@ -91,7 +96,7 @@ const Portfolio = () => {
                     <h1 className="fw-bold my-5 text-center">Recent <span className="text-primary">Project</span></h1>
                     <div className="row">
                         <div className="col-lg-4 text-center">
-                            {/* <img className="img-fluid" src={makeup} alt="" /> */}
+                            <img className="img-fluid" src={ESTORE} alt="" />
                             <h3>ESTORE</h3>
                             <p> MERN stack inventory management website</p>
                             <a target='_blank' href="https://wearhouse-e465d.web.app/" rel="noreferrer">
@@ -99,7 +104,7 @@ const Portfolio = () => {
                             </a>
                         </div>
                         <div className="col-lg-4 text-center">
-                            {/* <img className="img-fluid" src={photography} alt="" /> */}
+                            <img className="img-fluid" src={GYM} alt="" />
                             <h3>Gym</h3>
                             <p>A Fitness gym website.</p>
                             <a target='_blank' href="https://gym-55c6d.web.app/" rel="noreferrer">
@@ -107,7 +112,7 @@ const Portfolio = () => {
                             </a>
                         </div>
                         <div className="col-lg-4 text-center">
-                            {/* <img className="img-fluid" src={bike} alt="" /> */}
+                            <img className="img-fluid" src={CarParadise} alt="" />
                             <h3>CarParadise</h3>
                             <p>All kind of branded car you purchase here.</p>
                             <a target='_blank' href="https://carparadisemdabbasali.netlify.app/" rel="noreferrer">
