@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import axios from 'axios';
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -39,7 +39,15 @@ const SignUp = () => {
 
     useEffect(() => {
         if (user) {
-            navigate(from, { replace: true });
+            axios.put("/user", {
+                email: user.user.email
+            })
+            .then(res=>{
+                if(res.data){
+                    navigate(from, { replace: true });
+
+                }
+            })
         }
     }, [user]);
 

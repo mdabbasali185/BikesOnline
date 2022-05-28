@@ -1,8 +1,8 @@
 .sidebar {
   width: 345px;
-  background-color: antiquewhite;
+  background-color: #3c6382;
 }
-.sidebar a{
+.sidebar a {
   display: block;
   margin: 10px;
 }

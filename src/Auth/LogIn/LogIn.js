@@ -41,7 +41,15 @@ const LogIn = () => {
       axios.post('/jwt-generator', { email })
         .then(res => {
           localStorage.setItem('token', res.data)
-          navigate(from);
+          axios.put("/user", {
+            email: email
+          })
+            .then(res => {
+              if (res.data) {
+                navigate(from, { replace: true });
+
+              }
+            })
         })
     }
   }, [googleUser]);
@@ -59,7 +67,15 @@ const LogIn = () => {
       axios.post('/jwt-generator', { email })
         .then(res => {
           localStorage.setItem('token', res.data)
-          navigate(from);
+          axios.put("/user", {
+            email: email
+          })
+            .then(res => {
+              if (res.data) {
+                navigate(from, { replace: true });
+
+              }
+            })
         })
     }
   }, [user, email])
