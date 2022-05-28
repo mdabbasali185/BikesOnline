@@ -1,10 +1,10 @@
 # Getting Started with my new project bikesOnline
 
-This project was [bikesOnline](https://wearhouse-e465d.web.app/).
+This project was [bikesOnline](https://final-assignment-5fbe7.web.app/).
 
 # bikesOnline
 
-I am creating few Project. This my last Project this month.Always i am trying my best.This Project is a warehouse management system.
+I am creating few Project. This my last Project this month.Always i am trying my best.This Project is a bike parts sell and management website.
 
 ## Features
 

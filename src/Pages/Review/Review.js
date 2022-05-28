@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashCan, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios';
 
 const Review = () => {
+    const [reviews, setReviews] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        axios.get("/review")
+            .then(res => {
+                setReviews(res.data)
+                setLoading(false)
+            })
+    }, [loading])
+
     return (
         <div>
             <Table striped bordered hover className='text-center fw-bold w-100'>
@@ -10,27 +24,20 @@ const Review = () => {
                         <th>Email</th>
                         <th>Role</th>
 
-                        <th>Action</th>
+                        
                     </tr>
                 </thead>
-                {/* <tbody>
+                <tbody>
                     {
-                        users.map(user => (
+                        reviews.map(user => (
                             <tr key={user._id} className='table-danger'>
                                 <td attr='Email'>{user.email}</td>
                                 <td attr='Role'> {user.role ? user.role : 'User'}</td>
-                                <td attr='Action'>
-                                    <button onClick={() => deleteHandler(user._id)} className='btn btn-danger'>
-                                        <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
-                                    </button>
-                                    <button onClick={() => adminHandler(user._id)} className='btn btn-info'>
-                                        MakeAdmin
-                                    </button>
-                                </td>
+
                             </tr>
                         ))
                     }
-                </tbody> */}
+                </tbody>
 
             </Table>
         </div>

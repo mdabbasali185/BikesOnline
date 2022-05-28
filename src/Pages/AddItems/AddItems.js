@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../Firebase/firebase.init';
-import { toast } from 'react-toastify';
 import { Col, Row } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
+import auth from '../../Firebase/firebase.init';
 import './AddItems.css';
 
 const AddItems = () => {
@@ -27,7 +27,7 @@ const AddItems = () => {
             toast.error("price & quantity must be greater than zero.")
         }
         else {
-            axios.post('/inventories', data)
+            axios.post('/products', data)
                 .then(res => {
                     toast.info("post success", { theme: 'colored' });
                 })

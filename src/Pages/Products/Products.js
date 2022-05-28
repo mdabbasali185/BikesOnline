@@ -6,7 +6,7 @@ import LoadItems from '../LoadItems/LoadItems';
 const Products = () => {
     const [card, setCard] = useState([])
     useEffect(() => {
-        axios.get('/inventories')
+        axios.get('/products')
             .then(res => setCard(res.data))
     }, [])
     return (

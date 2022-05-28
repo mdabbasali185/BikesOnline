@@ -14,7 +14,7 @@ const Dashboard = () => {
                 } to='/dashboard/my_items'>My Order</NavLink>
                 <NavLink className={({ isActive }) =>
                     isActive ? "link-active link" : "link"
-                } to='/dashboard/review'>Add A Review</NavLink>
+                } to='/dashboard/review'>All Review</NavLink>
                 <NavLink className={({ isActive }) =>
                     isActive ? "link-active link" : "link"
                 } to='/dashboard/profile'>My Profile</NavLink>
@@ -23,7 +23,7 @@ const Dashboard = () => {
                 } to='/dashboard/manage-all-orders'>Manage All Orders</NavLink>
                 <NavLink className={({ isActive }) =>
                     isActive ? "link-active link" : "link"
-                } to='/dashboard/'>Add A Product</NavLink>
+                } to='/dashboard/' >Add A Product</NavLink>
                 <NavLink className={({ isActive }) =>
                     isActive ? "link-active link" : "link"
                 } to='/dashboard/manage_inventory'>Manage Products</NavLink>

@@ -9,7 +9,7 @@ const ManageUser = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get("http://localhost:5000/users")
+        axios.get("/users")
             .then(res => {
                 setUsers(res.data)
                 setLoading(false)

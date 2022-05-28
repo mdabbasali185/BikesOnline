@@ -1,9 +1,9 @@
+import { faSpinner, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashCan, faSpinner } from '@fortawesome/free-solid-svg-icons'
-import axios from 'axios';
-import './ManageInventory.css'
+import './ManageInventory.css';
 
 const ManageInventory = () => {
     const [inventories, setInventories] = useState([])
@@ -11,7 +11,7 @@ const ManageInventory = () => {
 
 
     useEffect(() => {
-        axios.get(`/inventories`)
+        axios.get(`/products`)
             .then(res => {
                 setInventories(res.data)
                 setLoading(false)
@@ -19,7 +19,7 @@ const ManageInventory = () => {
     }, [loading])
 
     const deleteHandler = (id) => {
-        axios.delete(`/inventory/${id}`)
+        axios.delete(`/product/${id}`)
             .then(res => setLoading(true))
     }
 

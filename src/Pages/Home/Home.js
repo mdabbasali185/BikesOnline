@@ -6,7 +6,6 @@ import { Card, Carousel, Col, Row } from 'react-bootstrap';
 import bike1 from '../../Images/bike1.jpeg';
 import bike2 from '../../Images/bike2.jpg';
 import bike3 from '../../Images/bike3.jpg';
-import bike4 from '../../Images/bike4.png';
 import Business from '../Business/Business';
 import LoadItems from '../LoadItems/LoadItems';
 import UserReview from '../UserReview/UserReview';
@@ -20,7 +19,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        axios.get('/inventories?limit=6')
+        axios.get('/products?limit=6')
             .then(res => {
                 setInventory(res.data)
                 setLoading(false)
@@ -81,7 +80,7 @@ const Home = () => {
             <div className='card-compo py-5'>
                 <div className='container '>
                     <h1 className="text-center text-info fw-bold mt-5 ">
-                        Inventory Items
+                        Bike Parts
                     </h1>
                     <div>
                         <Row xs={1} md={2} lg={3} className="g-5 mt-3 mb-5 align-items-stretch">
