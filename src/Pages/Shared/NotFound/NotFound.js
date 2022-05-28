@@ -1,5 +1,5 @@
 import React from 'react';
-// import notfound from '../../../Images/404page.jpg';
+import error from '../../../Images/error.jpg';
 import './NotFound.css';
 
 const NotFound = () => {
@@ -16,7 +16,7 @@ const NotFound = () => {
 
             </div>
             <div>
-                <img className='img-fluid mx-auto d-block py-5 ' src={"notfound"} alt="" />
+                <img className='img-fluid mx-auto d-block py-5 ' src={error} alt="" />
             </div>
         </section>
     );
