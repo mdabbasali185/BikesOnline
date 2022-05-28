@@ -16,7 +16,7 @@ const Dashboard = () => {
                 }
             })
                 .then(res => {
-                   setUser(res.data)
+                    setUser(res.data)
                 })
         }
     }, [])
