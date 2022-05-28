@@ -33,23 +33,23 @@ const Profile = () => {
                         <div className="projects_data">
                             <div className="data">
                                 <h4>Recent</h4>
-                                
+
                             </div>
                             <div className="data">
                                 <h4>Most Viewed</h4>
-                               
+
                             </div>
                         </div>
                     </div>
 
                     <div className="social_media">
-                    <div className='d-flex mb-3'>
-                <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.facebook.com/mdabbasali185'><FontAwesomeIcon className='px-2 fs-1 fb' icon={faFacebook}></FontAwesomeIcon></a>
-                <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://github.com/mdabbasali185'><FontAwesomeIcon className='px-2 fs-1 github' icon={faGithub}></FontAwesomeIcon></a>
-                <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='mailto:mdabbasali185@gmail.com'><FontAwesomeIcon className='px-2 fs-1 google' icon={faGoogle}></FontAwesomeIcon></a>
-                <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.instagram.com/mdabbasali185/'><FontAwesomeIcon className='px-2 fs-1 instagram' icon={faInstagram}></FontAwesomeIcon></a>
-                <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.linkedin.com/in/mdabbasali185/'><FontAwesomeIcon className='px-2 fs-1 linkedin' icon={faLinkedin}></FontAwesomeIcon></a>
-              </div>
+                        <div className='d-flex mb-3'>
+                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.facebook.com/mdabbasali185'><FontAwesomeIcon className='px-2 fs-1 fb' icon={faFacebook}></FontAwesomeIcon></a>
+                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://github.com/mdabbasali185'><FontAwesomeIcon className='px-2 fs-1 github' icon={faGithub}></FontAwesomeIcon></a>
+                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='mailto:mdabbasali185@gmail.com'><FontAwesomeIcon className='px-2 fs-1 google' icon={faGoogle}></FontAwesomeIcon></a>
+                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.instagram.com/mdabbasali185/'><FontAwesomeIcon className='px-2 fs-1 instagram' icon={faInstagram}></FontAwesomeIcon></a>
+                            <a className='text-decoration-none text-dark' rel='noreferrer' target='_blank' href='https://www.linkedin.com/in/mdabbasali185/'><FontAwesomeIcon className='px-2 fs-1 linkedin' icon={faLinkedin}></FontAwesomeIcon></a>
+                        </div>
                     </div>
                 </div>
             </div>

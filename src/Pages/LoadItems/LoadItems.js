@@ -19,7 +19,7 @@ const LoadItems = ({ product }) => {
                     <p className="fw-bold text-info fs-5"><strong className='text-secondary'>Quantity:</strong> {parseInt(quantity) <= 0 ? "SoldOut" : quantity}</p>
 
                 </Card.Body>
-                <Link to={`/single_items/${_id}`} className='animated-button'><span>Manage Inventories</span></Link>
+                <Link to={`/single_items/${_id}`} className='animated-button text-center'><span>Buy Now</span></Link>
             </Card>
         </Col>
     );

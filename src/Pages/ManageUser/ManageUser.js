@@ -54,7 +54,7 @@ const ManageUser = () => {
                                         <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
                                     </button>
                                     <button onClick={() => adminHandler(user._id)} className='btn btn-info'>
-                                        makeAdmin
+                                        MakeAdmin
                                     </button>
                                 </td>
                             </tr>
