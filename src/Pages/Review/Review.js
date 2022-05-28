@@ -22,17 +22,19 @@ const Review = () => {
                 <thead>
                     <tr className='fs-md-3 fs-2 bg-info text-secondary'>
                         <th>Email</th>
-                        <th>Role</th>
+                        <th>User Name</th>
+                        <th>Review </th>
 
-                        
+
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        reviews.map(user => (
-                            <tr key={user._id} className='table-danger'>
-                                <td attr='Email'>{user.email}</td>
-                                <td attr='Role'> {user.role ? user.role : 'User'}</td>
+                        reviews.map(review => (
+                            <tr key={review._id} className='table-danger'>
+                                <td attr='Email'>{review.email}</td>
+                                <td attr='userName'> {review.userName}</td>
+                                <td attr='Review'> {review.review}</td>
 
                             </tr>
                         ))
