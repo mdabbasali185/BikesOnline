@@ -80,7 +80,7 @@ const Home = () => {
             <div className='card-compo py-5'>
                 <div className='container '>
                     <h1 className="text-center text-info fw-bold mt-5 ">
-                        Bike Parts
+                    Our Products
                     </h1>
                     <div>
                         <Row xs={1} md={2} lg={3} className="g-5 mt-3 mb-5 align-items-stretch">

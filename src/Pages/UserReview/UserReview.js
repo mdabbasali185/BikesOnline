@@ -20,7 +20,7 @@ const UserReview = () => {
             <CardGroup>
                 {
                     reviews.map(review => (
-                        <Card>
+                        <Card key={review._id}>
                             <Card.Img className='w-25' variant="top" src={userReviewImg} />
                             <Card.Body>
                                 <Card.Title className='fw-bold'><span className='text-info'>User: </span>{review.username}</Card.Title>

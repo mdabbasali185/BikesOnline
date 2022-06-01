@@ -2,8 +2,10 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import { toast } from "react-toastify";
+import auth from '../../Firebase/firebase.init';
 import './SingleItems.css';
 
 const SingleItems = () => {
@@ -13,11 +15,12 @@ const SingleItems = () => {
     const [addQuantity, setAddQuantity] = useState([])
     const [userName, setUserName] = useState('')
     const [review, setReview] = useState('')
+    const [user] = useAuthState(auth)
     useEffect(() => {
 
     }, [])
 
-    const { description, supplier, name, quantity, image, price, limit, email } = item;
+    const { description, supplier, name, quantity: maxQuantity, image, price, limit, email } = item;
 
     useEffect(() => {
         axios.get(`/product/${id}`)
@@ -33,15 +36,16 @@ const SingleItems = () => {
         e.preventDefault()
         axios.post('/review', { userName, email, review })
             .then(res => {
-                console.log(res.data)
+                setLoading(true)
             })
     }
 
     const handleOrder = e => {
         e.preventDefault()
         const { email, number, userName, address, quantity } = e.target
-        if (quantity.value > quantity || quantity.value < limit) {
-            toast.error(`quantity value must be greater than ${limit} & smaller than ${quantity}`, { theme: 'colored' });
+
+        if (parseInt(quantity.value) > parseInt(maxQuantity) || parseInt(quantity.value) < parseInt(limit)) {
+            toast.error(`quantity value must be greater than ${limit} & smaller than ${maxQuantity}`, { theme: 'colored' });
         } else {
             const newOrder = {
                 productName: name,
@@ -51,8 +55,8 @@ const SingleItems = () => {
                 address: address.value,
                 quantity: quantity.value
             }
-            axios.post('/orders',newOrder)
-            .then(res=>console.log(res.data))
+            axios.post('/orders', newOrder)
+                .then(res => setLoading(true))
         }
     }
 
@@ -79,7 +83,7 @@ const SingleItems = () => {
                                         <p className="card-text fs-4 text-secondary"><strong>Description:</strong> {description}</p>
                                         <p className="card-text fs-4 text-secondary"><strong>Supplier:</strong> {supplier}</p>
                                         <p className="card-text fs-4 text-secondary"><strong>Quantity:</strong> {
-                                            parseInt(quantity) > 0 ? quantity : "SoldOut"
+                                            parseInt(maxQuantity) > 0 ? maxQuantity : "SoldOut"
                                         }</p>
                                         <p className="card-text fs-4 text-info fw-bold"><strong className='text-secondary'>Price:</strong> {price}</p>
                                         <p className="card-text fs-4 text-info fw-bold"><strong className='text-secondary'>Limit:</strong> {limit}</p>
@@ -100,16 +104,16 @@ const SingleItems = () => {
                                 </div>
                                 <form className="login-form mx-auto w-75  addForm p-4 mt-2" onSubmit={handleReview}>
                                     <input
-                                        className="form-control"
+                                        className="form-control text-info fw-bold"
                                         type="email"
                                         placeholder="Your Email"
-                                        value={email}
+                                        value={user.email}
                                         required
                                         readOnly
                                     />
 
                                     <input
-                                        className="form-control mt-3"
+                                        className="form-control text-info fw-bold mt-3"
                                         type="text"
                                         placeholder="userName"
                                         onChange={(e) => setUserName(e.target.value)}
@@ -117,7 +121,7 @@ const SingleItems = () => {
                                         value={userName}
                                     />
                                     <textarea
-                                        className="form-control mt-3"
+                                        className="form-control text-info fw-bold mt-3"
                                         rows={5}
                                         placeholder="review"
                                         onChange={(e) => setReview(e.target.value)}
@@ -142,17 +146,17 @@ const SingleItems = () => {
                         </div>
                         <form className="login-form mx-auto w-50 addForm p-4 mt-2" onSubmit={handleOrder}>
                             <input
-                                className="form-control"
+                                className="form-control text-info fw-bold"
                                 type="email"
                                 name='email'
                                 placeholder="Your Email"
-                                value={email}
+                                value={user.email}
                                 required
                                 readOnly
                             />
 
                             <input
-                                className="form-control mt-3"
+                                className="form-control text-info fw-bold mt-3"
                                 type="text"
                                 placeholder="userName"
                                 name="userName"
@@ -160,7 +164,7 @@ const SingleItems = () => {
 
                             />
                             <input
-                                className="form-control mt-3"
+                                className="form-control text-info fw-bold mt-3"
                                 type="text"
                                 placeholder="address"
                                 name="address"
@@ -168,7 +172,7 @@ const SingleItems = () => {
 
                             />
                             <input
-                                className="form-control mt-3"
+                                className="form-control text-info fw-bold mt-3"
                                 type="text"
                                 placeholder="number"
                                 name="number"
@@ -176,7 +180,7 @@ const SingleItems = () => {
 
                             />
                             <input
-                                className="form-control mt-3"
+                                className="form-control text-info fw-bold mt-3"
                                 type="number"
                                 placeholder="quantity"
                                 name="quantity"

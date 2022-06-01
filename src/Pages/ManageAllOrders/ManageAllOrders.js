@@ -17,10 +17,8 @@ const ManageAllOrders = () => {
             })
     }, [loading])
     const deleteHandler = (id) => {
-        console.log(id);
         axios.delete(`/orders/${id}`)
             .then(res => {
-                console.log(res.data)
                 setLoading(true)
             })
     }
@@ -43,9 +41,7 @@ const ManageAllOrders = () => {
                     {
                         orders.map(order => (
                             <tr key={order._id} className='table-danger'>
-                                {
-                                    console.log(order)
-                                }
+
                                 <td attr='ProductName'>{order.productName}</td>
                                 <td attr='email'>{order.email}</td>
                                 <td attr='number'>{order.number}</td>

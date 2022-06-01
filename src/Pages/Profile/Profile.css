@@ -1,28 +1,55 @@
-.wrapper {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrapper .left {
-  width: 35%;
-  background: linear-gradient(to right, #01a9ac, #01dbdf);
-  padding: 30px 25px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  text-align: center;
-  color: #fff;
+.profile-card {
   width: 400px;
-  margin: 20px;
-  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+  background-color: white;
 }
 
-.wrapper .left img {
-  border-radius: 5px;
-  max-width: 200px;
-  display: block;
-  margin: auto;
+.profile-card img {
+  height: 150px;
+  width: 150px;
+}
+
+.profile-edit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: var(--bs-primary);
+  font-size: 20px;
+}
+
+.profileForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #212335c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileForm form {
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.profileForm form input {
+  width: 100%;
   margin-bottom: 10px;
+  border: 1px solid rgba(100, 100, 100, 0.486);
+  border-radius: 4px;
+  outline: transparent !important;
+  padding: 5px 10px;
+}
+
+.profileForm form .close {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--bs-danger);
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
 }

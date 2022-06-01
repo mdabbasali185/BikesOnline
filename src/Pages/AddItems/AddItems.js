@@ -103,7 +103,7 @@ const AddItems = () => {
 
                     </Row>
                     <textarea rows="5" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
-                    <button className='animated-button mt-3' type="submit"> <span>add items</span> </button>
+                    <button className='animated-button mt-3 text-white' type="submit"> <span>add items</span> </button>
                 </form>
             </div>
         </div>
